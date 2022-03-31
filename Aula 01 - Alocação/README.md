@@ -4,7 +4,7 @@
 
 2. [Identificação de vazamento de memória usando a ferramenta Valgrind](memleak.c)
 
-3. Identificação de violação de memória usando a ferramenta Valgrind
+3. [Identificação de violação de memória usando a ferramenta Valgrind](memviolation.c)
 
 ## Utilitários
 

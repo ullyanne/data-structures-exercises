@@ -19,7 +19,7 @@ int main() {
 }
 
 //1 - Onde, no código acima, está ocorrendo violação de memória?
-//2 - Por que ele está ocorrendo?
+//2 - Por que ela está ocorrendo?
 //3 - Use a ferramenta valgrind para verificar suas respostas acima
 //4 - Conserte o código
 //5 - Rode o valgrind para verificar se os erros foram consertados

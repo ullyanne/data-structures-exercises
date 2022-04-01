@@ -1,23 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
-void filter(int(*f)(int x), int n, int *array) {
-    for(int i = 0; i < n; i++) {
-        if(f(*(array+i)) != -1)  
+void filter(bool(*f)(int x), int n, int i, int *array) {
+    if(i < n) {
+        if(f(*(array+i)) == true)  
             printf("%d ", *(array+i));
+        i++; 
+        filter(f, n, i, array);
     }
 }
 
-int even(int x) {
+bool even(int x) {
     if(x % 2 == 0) 
-        return x;
-    else return -1; 
+        return 1;
+    else return 0; 
 }
 
-int odd(int x) {
+bool odd(int x) {
     if(x % 2 != 0)
-        return x;
-    else return -1; 
+        return 1;
+    else return 0; 
 }
 
 int main() {
@@ -30,10 +33,10 @@ int main() {
         scanf("%d", (array+i));
 
     printf("---------PAR-------------\n");
-    filter(even, n, array);
+    filter(even, n, 0, array);
 
     printf("\n---------IMPAR----------\n");
-    filter(odd, n, array);
+    filter(odd, n, 0, array);
 
     free(array); 
     return 0;

@@ -2,51 +2,51 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-// atualizar: realocar toda vez que adicionar na funcao
-
-void filter(bool(*f)(int x), int n, int i, int newsize, int *array, int *array_f) {
+void filter(bool(*f)(int x), int n, int i, int newSize, int *array, int *newArray) {
     if(i < n) {
         if(f(*(array+i)) == true)  {
-            array_f[newsize] = array[i];
-            newsize++; 
+            newArray = realloc(newArray, (newSize+1)*sizeof(int));
+            newArray[newSize] = array[i];
+            newSize++; 
         }
         i++; 
-        filter(f, n, i, newsize, array, array_f);
+        filter(f, n, i, newSize, array, newArray);
     } else {
-        for(i = 0; i < newsize; i++) 
-            printf("%d ", *(array_f+i));
+        printf("Tamanho do array: %d\n", newSize);
+        for(i = 0; i < newSize; i++) 
+            printf("%d ", *(newArray+i));
     }
 }
 
 bool even(int x) {
     if(x % 2 == 0) 
         return 1;
-    return 0; 
+    else return 0; 
 }
 
 bool odd(int x) {
     if(x % 2 != 0)
         return 1;
-    return 0; 
+    else return 0; 
 }
 
 int main() {
-    int n, i, *array, *array_f;
+    int n, i, *array, *newArray;
     printf("Digite o tamanho do array: \n");
     scanf("%d", &n); 
-    array = (int*)malloc(n*sizeof(int));
-    array_f = (int*)malloc(n*sizeof(int));
+    array = malloc(n*sizeof(int));
+    newArray = NULL; 
 
     for(i = 0; i < n; i++)
         scanf("%d", (array+i));
 
     printf("---------PAR-------------\n");
-    filter(even, n, 0, 0, array, array_f); 
+    filter(even, n, 0, 0, array, newArray); 
 
     printf("\n---------IMPAR----------\n");
-    filter(odd, n, 0, 0, array, array_f); 
+    filter(odd, n, 0, 0, array, newArray); 
 
     free(array); 
-    free(array_f);
+    free(newArray);
     return 0;
 }

@@ -1,54 +1,47 @@
-//É para ocultar toda a função map ou apenas parcialmente?
+//Preencha os trechos omitidos com #
 
 #include <stdio.h>
 #include <stdlib.h>
 
-void map(int(*function)(int), int* array, int* newarray, int len)
-{
-    if(len > 0)
-    {
-        *newarray = function(*array);
-        printf("%d ", *newarray);
+void map(#, int * array, int len) {
+    int result, i;
 
-        return(map(function, array+1, newarray+1, len-1));
+    for (int i = 0; i < len; i++) {
+        result = #;
+        printf ("%d ", result);
     }
 }
 
-int factorial(int num)
-{
-    if(num == 0)
+int factorial(int num) {
+    if (num == 0)
         return 1;
-    return(num * factorial(num-1));
+    return (num * factorial (num - 1));
 }
 
-int square(int num)
-{
-    return(num * num);
+int square(int num) {
+    return (num * num);
 }
 
-int main()
-{
+int main() {
     int len, i;
 
-    printf("Insira o tamanho do array.\n");
-    scanf("%d", &len);
+    printf ("Insira o tamanho do array.\n");
+    scanf ("%d", &len);
 
-    int *array = (int*) malloc(len * sizeof(int));
-    int *newarray = (int*) malloc(len * sizeof(int));
-    
-    printf("Digite os elementos do array.\n");
+    int* array = (int *) malloc ( len * sizeof(int) );
 
-    for(i = 0; i < len; i++)
-        scanf("%d", array+i);
-    
-    printf("FACTORIAL:\n");
-    map(factorial, array, newarray, len);
+    printf ("Digite os elementos do array.\n");
 
-    printf("\nSQUARE:\n");
-    map(square, array, newarray, len);
-    printf("\n");
+    for (i = 0; i < len; i++)
+        scanf ("%d", array + i);
 
-    free(array);
-    free(newarray);
+    printf ("\nFACTORIAL:\n");
+    map (factorial, array, len);
+
+    printf ("\nSQUARE:\n");
+    map (square, array, len);
+    printf ("\n");
+
+    free (array);
     return 0;
 }

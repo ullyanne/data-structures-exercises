@@ -5,14 +5,10 @@ int main() {
 
     int i, *a;
 
-    a = (int*) calloc(10, sizeof(int));
+    a = (int * ) calloc ( 10, sizeof(int) );
 
-    for(i=0; i <= 10; i++) {
-    a[i] = i;
-    }
-    
-    for(i=0; i <= 10; i++) {
-    printf("%d\n", a[i]);
+    for (i = 0; i <= 10; i++) {
+        a[i] = i;
     }
 
     return 0;

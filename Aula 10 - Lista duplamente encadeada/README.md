@@ -2,4 +2,4 @@
 
 1. [Printar lista duplamente encadeada](print.c)
 
-3. [Remover item de lista duplamente encadeada](remove.c)
+2. [Remover item de lista duplamente encadeada](remove.c)

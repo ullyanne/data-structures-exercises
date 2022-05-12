@@ -1,36 +1,21 @@
-# Plotando gráfico para comparação entre BubbleSort, InsertionSort e MergeSort
-
-## Utilitários
-
-- Instalação do RStudio 
-
-1. R 
-    https://cran.rstudio.com/
-
-2. RStudio 
-    https://www.rstudio.com/products/rstudio/download/ 
-
-## Estrutura para colocar no RStudio
-
-bubble = c(458, 1954, 4286, 7913, 13696, 18037, 33743, 44262, 64690)
-insertion = c(95, 405, 855, 1516, 2390, 3958, 7114, 6151, 11765)
-merge = c(2, 5, 9, 10, 13, 16, 26, 21, 37)
-tamanho = c(10000, 20000, 30000, 40000, 50000, 60000, 70000, 80000, 90000)
-
-
-plot(tamanho, bubble, type = "b", frame = FALSE, pch = 19, 
-     col = "red", xlab = "x", ylab = "y")
-
-lines(tamanho, bubble, pch = 18, col = "blue", type = "b", lty = 2)
-lines(tamanho, insertion, pch = 18, col = "black", type = "b", lty = 2)
-lines(tamanho, merge, pch = 18, col = "red", type = "b", lty = 2)
+# Plotando gráfico para comparação de complexidade de tempo entre BubbleSort, InsertionSort e MergeSort
 
 ## Exercício
 
-```sh
-    Execute o programa com os algoritmos de ordenação indicados e plote o gráfico no RStudio.
-```
+> Execute o programa com os algoritmos de ordenação indicados e, a partir dos números gerados em sua execução, plote um gráfico no RStudio.
+
+[Algoritmos de ordenação](algorithms.c)
+
+[Plot do gráfico no RStudio](graph.r)
+
+## Utilitários
+
+Instalação do R e RStudio 
+
+1. [R](https://cran.rstudio.com/)
+
+2. [RStudio](https://www.rstudio.com/products/rstudio/download/)
 
 ## Fontes
 
-> *[Algoritmos de ordenação](https://www.geeksforgeeks.org/)* 
+> *[C program for Time Complexity plot of Bubble, Insertion and Selection Sort using Gnuplot](https://www.geeksforgeeks.org/c-program-for-time-complexity-plot-of-bubble-insertion-and-selection-sort-using-gnuplot/)* 

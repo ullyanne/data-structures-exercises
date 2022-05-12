@@ -9,16 +9,16 @@ struct node {
 };
 
 struct node* create(int item) {
-    struct node* newnode = (struct node*) malloc(sizeof(struct node));
-    newnode -> item = item;
-    newnode -> next = NULL;
-    return newnode;
+    struct node* newNode = (struct node*) malloc(sizeof(struct node));
+    newNode -> item = item;
+    newNode -> next = NULL;
+    return newNode;
 }
 
 struct node* add(struct node* head, int item) {
-    struct node* newnode = create(item);
-    newnode -> next = head;
-    return newnode;
+    struct node* newNode = create(item);
+    newNode -> next = head;
+    return newNode;
 }
 
 // Preencha aqui

@@ -1,5 +1,5 @@
 # Exercícios
 
-1. [Printar lista encadeada](print.c)
+1. [Printar lista duplamente encadeada](print.c)
 
-3. [Remover item de lista encadeada](remove.c)
+3. [Remover item de lista duplamente encadeada](remove.c)

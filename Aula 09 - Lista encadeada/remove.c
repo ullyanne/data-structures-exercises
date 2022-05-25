@@ -1,5 +1,3 @@
-// Implemente a função remover item de lista encadeada
-
 #include <stdio.h>
 #include <stdlib.h>
 

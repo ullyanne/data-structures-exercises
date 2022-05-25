@@ -1,5 +1,3 @@
-// Implemente a função printar lista encadeada recursivamente
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -21,7 +19,6 @@ struct node* add(struct node* head, int item) {
     return newNode;
 }
 
-// Preencha aqui
 void print_linked_list(struct node *head)
 {
     if (!is_empty(head)) {

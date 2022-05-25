@@ -1,5 +1,3 @@
-// Implemente a função printar lista encadeada
-
 #include <stdio.h>
 #include <stdlib.h>
 

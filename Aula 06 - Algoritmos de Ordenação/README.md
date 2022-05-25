@@ -1,4 +1,4 @@
-# Plotando gráfico para comparação de complexidade de tempo entre BubbleSort, InsertionSort e MergeSort
+# Plotando gráfico para comparação de complexidade de tempo entre InsertionSort e MergeSort
 
 ## Exercício
 

@@ -74,12 +74,12 @@ int main() {
     printf("A_size, Insertion, Merge\n");
 
     while (it++ < 41) {
-        unsigned long int b[n], c[n];
+        unsigned long int a[n], b[n];
 
         for (int i = 0; i < n; i++) {
             unsigned long int no = rand() % n + 1;
+            a[i] = no;
             b[i] = no;
-            c[i] = no;
         }
 
         // using clock_t to store time
@@ -87,14 +87,14 @@ int main() {
 
         // Insertion sort
         start = clock();
-        insertionSort(b, n);
+        insertionSort(a, n);
         end = clock();
 
         tim1[it] = ((double)(end - start));
 
         // Merge sort
         start = clock();
-        mergeSort(c, 0, n);
+        mergeSort(b, 0, n);
         end = clock();
 
         tim2[it] = ((double)(end - start));

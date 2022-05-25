@@ -23,7 +23,7 @@ void print_linked_list(struct node* head)
 {
     while (head != NULL) {
         printf("%d\n", #);
-        // preenha aqui
+        // preencha aqui
      }
 }
 

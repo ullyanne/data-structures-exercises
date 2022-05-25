@@ -31,7 +31,7 @@ struct node* remove(struct node *head, int item)
     if (current == NULL) {
         return head;
     } if (previous == NULL) {
-        // preenha aqui
+        // preencha aqui
     } else {
         // preencha aqui
     }

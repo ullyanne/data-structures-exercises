@@ -1,5 +1,3 @@
-// Implemente a função push para pilha
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -20,9 +18,14 @@ struct stack* create_stack(){
     return new_stack;
 }
 
-// Preencha aqui
-
-void push(struct stack* stack, int item);
+void push(struct stack* stack, int item)
+{
+    if (stack->current_size == MAX_STACK_SIZE) {
+        printf("Stack overflow");
+    } else {
+        // preencha aqui
+    }
+}
 
 int main(){
     struct stack* stack = create_stack();

@@ -1,5 +1,3 @@
-// Implemente a função pop para pilha
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -20,9 +18,15 @@ struct stack* create_stack(){
     return new_stack;
 }
 
-// Preencha aqui
-
-int pop(struct stack* stack);
+int pop(struct stack* stack)
+{
+    if (is_empty(stack)) {
+        printf("Stack underflow");
+        return -1;
+    } else {
+        // preencha aqui
+    }
+}
 
 int main(){
     struct stack* stack = create_stack();

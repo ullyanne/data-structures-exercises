@@ -2,24 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-void swap(long int *a, long int *b) {
-    int tmp = *a;
-    *a = *b;
-    *b = tmp;
-}
-
-void bubbleSort(long int a[], long int n) {
-    for (long int i = 0; i < n - 1; i++) {
-        for (long int j = 0; j < n - 1 - i; j++) {
-            if (a[j] > a[j + 1]) {
-                swap( & a[j], & a[j + 1]);
-            }
-        }
-    }
-}
-
-void insertionSort(long int arr[], long int n) {
-    long int i, key, j;
+void insertionSort(unsigned long int arr[], unsigned long int n) {
+    unsigned long int i, key, j;
     for (i = 1; i < n; i++) {
         key = arr[i];
         j = i - 1;
@@ -32,7 +16,7 @@ void insertionSort(long int arr[], long int n) {
     }
 }
 
-void merge(long int arr[], int l, int m, int r) {
+void merge(unsigned long int arr[], int l, int m, int r) {
     int i, j, k;
     int n1 = m - l + 1;
     int n2 = r - m;
@@ -71,7 +55,7 @@ void merge(long int arr[], int l, int m, int r) {
     }
 }
 
-void mergeSort(long int arr[], int l, int r) {
+void mergeSort(unsigned long int arr[], int l, int r) {
     if (l < r) {
         int m = l + (r - l) / 2;
         mergeSort(arr, l, m);
@@ -82,19 +66,18 @@ void mergeSort(long int arr[], int l, int r) {
 }
 
 int main() {
-    long int n = 10000;
+    unsigned long int n = 10000;
     int it = 0;
 
-    double tim1[10], tim2[10], tim3[10];
+    double tim1[10], tim2[10];
 
-    printf("A_size, Bubble, Insertion, Merge\n");
+    printf("A_size, Insertion, Merge\n");
 
-    while (it++ < 10) {
-        long int a[n], b[n], c[n];
+    while (it++ < 41) {
+        unsigned long int b[n], c[n];
 
         for (int i = 0; i < n; i++) {
-            long int no = rand() % n + 1;
-            a[i] = no;
+            unsigned long int no = rand() % n + 1;
             b[i] = no;
             c[i] = no;
         }
@@ -102,34 +85,26 @@ int main() {
         // using clock_t to store time
         clock_t start, end;
 
-        // Bubble sort
-        start = clock();
-        bubbleSort(a, n);
-        end = clock();
-
-        tim1[it] = ((double)(end - start));
-
         // Insertion sort
         start = clock();
         insertionSort(b, n);
         end = clock();
 
-        tim2[it] = ((double)(end - start));
+        tim1[it] = ((double)(end - start));
 
         // Merge sort
         start = clock();
         mergeSort(c, 0, n);
         end = clock();
 
-        tim3[it] = ((double)(end - start));
+        tim2[it] = ((double)(end - start));
 
-        // type conversion to long int
+        // type conversion to unsigned long int
         // for plotting graph with integer values
-        printf("%li, %li, %li, %li\n",
+        printf("%lu, %lu, %lu\n",
             n,
-            (long int) tim1[it],
-            (long int) tim2[it],
-            (long int) tim3[it]);
+            (unsigned long int) tim1[it],
+            (unsigned long int) tim2[it]);
 
         // increases the size of array by 10000
         n += 10000;

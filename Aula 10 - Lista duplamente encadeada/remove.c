@@ -1,5 +1,3 @@
-// Implemente a função remover item de lista duplamente encadeada
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -27,8 +25,26 @@ struct node* add(struct node* head, int item) {
     return newNode;
 }
 
-// Preencha aqui
-struct node* remove(struct node* head, int item);
+struct node* remove(struct node* head, int item)
+{
+    struct node *current = head;
+    while (current != NULL && current->item != item) 
+        current = current->next;
+        
+    if (current == NULL) return head;
+    if (head == current) {
+        head = current->next;
+    } else {
+        // preencha aqui
+    }
+    
+    if (current->next != NULL) {
+        // preencha aqui
+    }
+    
+    free(current);
+    return head;
+}
 
 int main(){
     struct node* head = NULL;

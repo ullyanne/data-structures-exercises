@@ -21,8 +21,13 @@ struct node* add(struct node* head, int item) {
     return newNode;
 }
 
-// Preencha aqui
-void print_linked_list(struct node* head);
+void print_linked_list(struct node* head)
+{
+    while (head != NULL) {
+        printf("%d\n", #);
+        // preenha aqui
+     }
+}
 
 int main(){
     struct node* head = NULL;

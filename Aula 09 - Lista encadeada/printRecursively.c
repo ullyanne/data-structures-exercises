@@ -22,7 +22,13 @@ struct node* add(struct node* head, int item) {
 }
 
 // Preencha aqui
-void print_linked_list(struct node* head);
+void print_linked_list(struct node *head)
+{
+    if (!is_empty(head)) {
+        printf("%d\n", #);
+        // preencha aqui
+    }
+}
 
 int main(){
     struct node* head = NULL;

@@ -21,8 +21,26 @@ struct node* add(struct node* head, int item) {
     return newNode;
 }
 
-// Preencha aqui
-struct node* remove(struct node* head, int item);
+struct node* remove(struct node *head, int item)
+{
+    struct node *previous = NULL;
+    struct node *current = head;
+
+    while (current != NULL && current->item != item) {
+        // preencha aqui
+    }
+
+    if (current == NULL) {
+        return head;
+    } if (previous == NULL) {
+        // preenha aqui
+    } else {
+        // preencha aqui
+    }
+
+    free(current);
+    return head;
+}
 
 int main(){
     struct node* head = NULL;

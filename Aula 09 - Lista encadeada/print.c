@@ -22,9 +22,9 @@ struct node* add(struct node* head, int item) {
 void print_linked_list(struct node* head)
 {
     while (head != NULL) {
-        printf("%d\n", #);
-        // preencha aqui
-     }
+        printf("%d\n", head->item);
+        //preencha aqui
+    }
 }
 
 int main(){

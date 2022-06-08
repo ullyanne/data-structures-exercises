@@ -22,7 +22,7 @@ struct node* add(struct node* head, int item) {
 void print_linked_list(struct node *head)
 {
     if (!is_empty(head)) {
-        printf("%d\n", #);
+        printf("%d\n", head->item);
         // preencha aqui
     }
 }

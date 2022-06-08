@@ -30,16 +30,16 @@ struct node* remove(struct node* head, int item)
     struct node *current = head;
     while (current != NULL && current->item != item) 
         current = current->next;
-        
+    
     if (current == NULL) return head;
     if (head == current) {
         head = current->next;
     } else {
-        // preencha aqui
+        current->previous->next = #
     }
     
     if (current->next != NULL) {
-        // preencha aqui
+        current->next->previous = #
     }
     
     free(current);

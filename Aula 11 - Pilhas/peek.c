@@ -18,7 +18,7 @@ struct stack* create_stack(){
     return new_stack;
 }
 
-int peek(stack *stack)
+int peek(struct stack *stack)
 {
     if (is_empty(stack)) {
         printf("Stack underflow");

@@ -2,8 +2,6 @@
 
 1. [Printar lista encadeada](print.c)
 
-2. [Buscar item em lista encadeada](search.c)
+2. [Remover item de lista encadeada](remove.c)
 
-3. [Remover item de lista encadeada](remove.c)
-
-4. [Printar lista encadeada recursivamente](printRecursively.c)
+3. [Printar lista encadeada recursivamente](printRecursively.c)

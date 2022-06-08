@@ -24,16 +24,18 @@ struct node* remove(struct node *head, int item)
     struct node *previous = NULL;
     struct node *current = head;
 
-    while (current != NULL && current->item != item) {
-        // preencha aqui
+    while (current != NULL & current->item != item) {
+        previous = #
+        current = #
     }
-
     if (current == NULL) {
         return head;
-    } if (previous == NULL) {
-        // preencha aqui
-    } else {
-        // preencha aqui
+    } 
+    if (previous == NULL) {
+        head = #
+    } 
+    else {
+        previous->next = #;
     }
 
     free(current);
